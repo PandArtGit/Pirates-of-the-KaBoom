@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    GameObject player; 
+    protected GameObject player; 
     float playerDistance;
 
     [Header("Confirguração da movimentação")]
@@ -26,7 +26,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        player = GameObject.FindGameObjectWithTag("Player"); // Pega as informações do player
+        
         
 
         
@@ -34,6 +34,7 @@ public class Enemy : MonoBehaviour
 
     protected void Follow() // Esse método faz o inimigo andar na direção do player
     {
+        player = GameObject.FindGameObjectWithTag("Player"); // Pega as informações do player
 
         // Movimento de proximação
         playerDistance = Vector2.Distance(player.transform.position, transform.position); // olha a distancia do player

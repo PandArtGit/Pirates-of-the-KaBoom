@@ -1,0 +1,48 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class PlayerMoviment : MonoBehaviour
+{
+    [Header("Confirguração da movimentação")]
+    [SerializeField]
+    float maxSpeed; // Velocidade maxima do barco
+    
+    [SerializeField]
+    float acceleration; // Aceleração do barco
+
+    [SerializeField]
+    float slowdown; // Desaceleração do barco
+    
+    float speed = 0; // Velocidade atual do barco
+
+    [SerializeField]
+    float rotateSpeed; // Velocidade de rotação do barco
+
+    float rotateAxis; // Eixo de rotação do barco
+   
+    void Update()
+    {
+        // Mover pra frente
+        if(Input.GetKey(KeyCode.W)){  // Pega o input de aceleração
+            if(speed < maxSpeed){     
+                speed += acceleration * Time.deltaTime;  // aumenta a velocidade
+            }    
+        }
+        else{
+            if(speed > 0){
+                speed -= slowdown * Time.deltaTime;  // diminui a velocidade quando larga o acelerador 
+            }
+        }
+
+        transform.Translate(Vector3.up * Time.deltaTime * speed); // faz a movimentação do barco
+        
+
+        // Rotacionar
+        rotateAxis = Input.GetAxis("Horizontal")  * -1; // Pega o input de rotação com a polaridade invertida
+                        //(A = Positivo | D = Negativo)
+
+        transform.Rotate(Vector3.forward * rotateAxis * Time.deltaTime * rotateSpeed); // faz a rotação do barco
+    }
+
+}

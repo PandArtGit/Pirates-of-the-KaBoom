@@ -5,26 +5,20 @@ using UnityEngine;
 public class PlayerMoviment : MonoBehaviour
 {
     [Header("Confirguração da movimentação")]
-    [SerializeField]
-    float maxSpeed; // Velocidade maxima do barco
-    
-    [SerializeField]
-    float acceleration; // Aceleração do barco
-
-    [SerializeField]
-    float slowdown; // Desaceleração do barco
+    [SerializeField] float maxSpeed; // Velocidade maxima do barco  
+    [SerializeField] float acceleration; // Aceleração do barco
+    [SerializeField] float slowdown; // Desaceleração do barco
     
     float speed = 0; // Velocidade atual do barco
 
-    [SerializeField]
-    float rotateSpeed; // Velocidade de rotação do barco
+    [SerializeField] float rotateSpeed; // Velocidade de rotação do barco
 
     float rotateAxis; // Eixo de rotação do barco
    
     void Update()
     {
         // Mover pra frente
-        if(Input.GetKey(KeyCode.W)){  // Pega o input de aceleração
+        if(Input.GetKey(KeyCode.UpArrow)){  // Pega o input de aceleração
             if(speed < maxSpeed){     
                 speed += acceleration * Time.deltaTime;  // aumenta a velocidade
             }    

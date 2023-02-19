@@ -5,32 +5,16 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     protected GameObject player; 
-    float playerDistance;
+    protected float playerDistance;
 
     [Header("Confirguração da movimentação")]
-    [SerializeField]
-    float followRange; // Indica a que distancia deve ficar do player
-
-    [SerializeField]
-    float maxSpeed; // Velocidade maxima do inimigo
-
-    [SerializeField]
-    float acceleration; // Aceleração do inimigo
-
-    [SerializeField]
-    float slowdown;  // Desaceleração do inimigo
-
-    [SerializeField]
-    float rotateSpeed; // Velocidade de rotação
+    [SerializeField] protected float followRange; // Indica a que distancia deve ficar do player
+    [SerializeField] float maxSpeed; // Velocidade maxima do inimigo
+    [SerializeField] float acceleration; // Aceleração do inimigo
+    [SerializeField] float slowdown;  // Desaceleração do inimigo
+    [SerializeField] float rotateSpeed; // Velocidade de rotação
     float speed = 0; // Velocidade atual
 
-    void Update()
-    {
-        
-        
-
-        
-    }
 
     protected void Follow() // Esse método faz o inimigo andar na direção do player
     {

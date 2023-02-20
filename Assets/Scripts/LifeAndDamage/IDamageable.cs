@@ -5,7 +5,8 @@ using UnityEngine;
 
 public interface IDamageable
 {
-    void TakeDamage();
-    event Action DamageEvent;
+    
+    void TakeDamage(float damage);
+    event Action<float> DamageEvent;
   
 }

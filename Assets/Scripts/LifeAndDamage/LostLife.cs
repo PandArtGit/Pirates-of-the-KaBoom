@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class LostLife : MonoBehaviour, IDamageable
 {
-    public event Action DamageEvent;
-    public void TakeDamage(){
-        DamageEvent.Invoke();
+    public event Action<float> DamageEvent;
+    public void TakeDamage(float damage){
+        DamageEvent.Invoke(damage);
+        
     }
     
 }

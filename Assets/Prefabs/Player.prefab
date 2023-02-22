@@ -1113,6 +1113,7 @@ GameObject:
   - component: {fileID: 2676514594881459434}
   - component: {fileID: 2676514594881459433}
   - component: {fileID: 2676514594881459432}
+  - component: {fileID: -1331590667056568955}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1149,10 +1150,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7988cb622da114f49bdfc8529a2f9875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 2.2
+  maxSpeed: 2
   acceleration: 6
   slowdown: 2
-  rotateSpeed: 150
+  rotateSpeed: 120
 --- !u!114 &2676514594881459437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1236,7 +1237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f3b0827b322a645bf029d67b889c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animatorController: {fileID: 2676514594881459432}
   life: 10
   maxLife: 10
 --- !u!95 &2676514594881459432
@@ -1259,6 +1259,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &-1331590667056568955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2676514594881459441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6ebbc01df0498c498260ee971bdff54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heath: {fileID: 2676514594545019052}
 --- !u!1 &2676514594907807378
 GameObject:
   m_ObjectHideFlags: 0

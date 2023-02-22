@@ -6,6 +6,9 @@ public class Chaser : Enemy
 {
     void Update()
     {
-        Follow();
+        if(player != null){ // Se o player existir, seguir com os métodos
+            Follow();
+        }
+        
     }
 }

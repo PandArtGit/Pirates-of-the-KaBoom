@@ -11,8 +11,11 @@ public class Shooter : Enemy
 
     void Update()
     {
-        Follow();
-        Attack();
+        if(player != null){ // Se o player existir, seguir com os métodos
+            Follow();
+            Attack();
+        }
+        
     }
 
     void Attack()

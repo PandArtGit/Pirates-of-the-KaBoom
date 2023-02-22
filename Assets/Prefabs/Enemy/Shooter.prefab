@@ -768,11 +768,12 @@ GameObject:
   - component: {fileID: 5532711610526387531}
   - component: {fileID: 5532711610526387528}
   - component: {fileID: 5532711610526387529}
+  - component: {fileID: 8217322908495960783}
   - component: {fileID: 5532711610526387542}
   m_Layer: 0
   m_Name: Shooter
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 6519382022992737161, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -843,11 +844,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b517b1ba948c5904b8cc14bce61f999e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followRange: 3
+  followRange: 4
   maxSpeed: 1.5
   acceleration: 0.5
   slowdown: 1
-  rotateSpeed: 4
+  rotateSpeed: 6
   projectile: {fileID: 2004921975545597438, guid: a79483e600bcbed42be6d5fc7242c9c1, type: 3}
   cannon: {fileID: 5532711609909643484}
   fireRate: 2
@@ -875,9 +876,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f3b0827b322a645bf029d67b889c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animatorController: {fileID: 5532711610526387542}
-  life: 10
-  maxLife: 10
+  life: 5
+  maxLife: 5
+--- !u!114 &8217322908495960783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5532711610526387521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6ebbc01df0498c498260ee971bdff54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heath: {fileID: 5532711609280428871}
 --- !u!95 &5532711610526387542
 Animator:
   serializedVersion: 4

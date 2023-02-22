@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2004921975545597436}
   - component: {fileID: 2004921975545597439}
   - component: {fileID: 2004921975545597435}
-  - component: {fileID: 8503643264885581778}
+  - component: {fileID: 4817985198676395979}
   m_Layer: 0
   m_Name: cannonBall
   m_TagString: Untagged
@@ -148,8 +148,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d7f8d96202d4ee49b6629540bff2966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
---- !u!114 &8503643264885581778
+  effect: {fileID: 8199291540267172010, guid: 81476780a8eab9d4ebda6fea6c2bdd88, type: 3}
+  lifeTime: 0.5
+  speed: 6
+--- !u!114 &4817985198676395979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -161,9 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5e4ce9f4f72de24cb759d29a1eb621e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canIDestroyMySelf: 1
   damage: 1
-  explosion: {fileID: 955980213398692321, guid: b1c2540d939915c489d0aa51164cc319, type: 3}
+  prefrab: {fileID: 955980213398692321, guid: b1c2540d939915c489d0aa51164cc319, type: 3}
+  ImBullet: 1
 --- !u!1 &8306087871391426727
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +257,7 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 1
       - serializedVersion: 3
-        time: 1
+        time: 0.42523193
         value: 0
         inSlope: -0.10377359
         outSlope: -0.10377359
@@ -268,7 +270,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 1, g: 1, b: 1, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}

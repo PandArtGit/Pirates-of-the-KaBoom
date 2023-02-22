@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    protected GameObject player; 
+    protected GameObject player;
     protected float playerDistance;
 
     [Header("Confirguração da movimentação")]
@@ -15,14 +15,15 @@ public class Enemy : MonoBehaviour
     [SerializeField] float rotateSpeed; // Velocidade de rotação
     float speed = 0; // Velocidade atual
 
-
+    private void Start() {
+        player = GameObject.FindWithTag("Player");
+    }
+    
     protected void Follow() // Esse método faz o inimigo andar na direção do player
     {
-        player = GameObject.FindGameObjectWithTag("Player"); // Pega as informações do player
-
+        
         // Movimento de proximação
         playerDistance = Vector2.Distance(player.transform.position, transform.position); // olha a distancia do player
-        
         if(playerDistance > followRange){  // Pega o input de aceleração
             if(speed < maxSpeed){     
                 speed += acceleration * Time.deltaTime;  // Aumenta a velocidade

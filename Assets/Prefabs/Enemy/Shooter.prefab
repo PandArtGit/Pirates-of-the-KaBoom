@@ -849,6 +849,8 @@ MonoBehaviour:
   acceleration: 0.5
   slowdown: 1
   rotateSpeed: 6
+  score: {fileID: 0}
+  myValue: 10
   projectile: {fileID: 2004921975545597438, guid: a79483e600bcbed42be6d5fc7242c9c1, type: 3}
   cannon: {fileID: 5532711609909643484}
   fireRate: 2
@@ -876,8 +878,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f3b0827b322a645bf029d67b889c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 5
-  maxLife: 5
+  life: 6
+  maxLife: 6
 --- !u!114 &8217322908495960783
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,8 @@ public class PlayerMoviment : MonoBehaviour
    
     void Update()
     {
+        // Não deixa sair do mapa
+        limitMoviment(8, -8);
         // Mover pra frente
         if(Input.GetKey(KeyCode.UpArrow)){  // Pega o input de aceleração
             if(speed < maxSpeed){     
@@ -37,6 +39,18 @@ public class PlayerMoviment : MonoBehaviour
                         //(A = Positivo | D = Negativo)
 
         transform.Rotate(Vector3.forward * rotateAxis * Time.deltaTime * rotateSpeed); // faz a rotação do barco
+    }
+
+    void limitMoviment(float limitA, float limitB)
+    {
+        if(transform.position.x > limitA)
+        {
+            transform.Translate(Vector2.right * -maxSpeed * Time.deltaTime, Space.World);
+        }
+        if(transform.position.x < limitB)
+        {
+            transform.Translate(Vector2.right * maxSpeed * Time.deltaTime, Space.World);
+        }
     }
 
 }

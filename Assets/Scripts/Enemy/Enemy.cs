@@ -6,15 +6,18 @@ public class Enemy : MonoBehaviour
 {
     protected GameObject player;
     protected float playerDistance;
-
-    [Header("Confirguração da movimentação")]
     [SerializeField] protected float followRange; // Indica a que distancia deve ficar do player
     [SerializeField] float maxSpeed; // Velocidade maxima do inimigo
     [SerializeField] float acceleration; // Aceleração do inimigo
     [SerializeField] float slowdown;  // Desaceleração do inimigo
     [SerializeField] float rotateSpeed; // Velocidade de rotação
     float speed = 0; // Velocidade atual
+    [SerializeField] int myValue;
 
+    void OnDestroy() {
+
+        PlayerPrefs.SetInt("Score", PlayerPrefs.GetInt("Score") + myValue);
+    }
     private void Start() {
         player = GameObject.FindWithTag("Player");
     }

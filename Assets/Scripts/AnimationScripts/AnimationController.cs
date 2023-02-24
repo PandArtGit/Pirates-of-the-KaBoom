@@ -31,7 +31,7 @@ public class AnimationController : MonoBehaviour
     }
 
     private void Update() {
-        if(heath.LifeToAnimation <= 0){ // se a vida do objeto acabar, manda fazer a animação de morte
+        if(heath.LifeToAnimation < 1){ // se a vida do objeto acabar, manda fazer a animação de morte
             animator.SetTrigger("IsDead");
         }
         

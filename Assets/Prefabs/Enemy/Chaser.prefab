@@ -958,6 +958,7 @@ MonoBehaviour:
   acceleration: 0.5
   slowdown: 1
   rotateSpeed: 2
+  myValue: 25
 --- !u!114 &8171686836853461045
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -982,8 +983,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f3b0827b322a645bf029d67b889c9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  life: 5
-  maxLife: 5
+  life: 4
+  maxLife: 4
 --- !u!95 &8171686836853461043
 Animator:
   serializedVersion: 4
@@ -1057,7 +1058,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 3
   prefrab: {fileID: 0}
-  animator: {fileID: 0}
+  ImBullet: 0
 --- !u!1001 &2802431354180608167
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class LifebarUI : MonoBehaviour
 {
     [SerializeField] Image lifebarFill;
     [SerializeField] LifeController heath;
-    [SerializeField] float speedDecay = 6;
+    [SerializeField] float speedDecay = 4;
 
     float lifePercent;
 
